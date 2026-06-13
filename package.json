@@ -30,14 +30,14 @@
     "@biomejs/biome": "2.2.0",
     "@playwright/test": "^1.60.0",
     "@sanity/client": "^7.22.1",
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4.3.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
     "next-sanity": "^12.4.5",
     "sanity": "^5.31.1",
-    "tailwindcss": "^4",
+    "tailwindcss": "^4.3.1",
     "typescript": "^5"
   }
 }
