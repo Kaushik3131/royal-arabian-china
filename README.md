@@ -6,7 +6,7 @@ A CMS-driven travel destination page for Royal Arabian DMC, built as part of the
 **🎨 Sanity Studio:** https://royal-arabian-china.vercel.app/studio  
 **📦 GitHub Repo:** https://github.com/Kaushik3131/royal-arabian-china  
 **🗄️ Sanity Project ID:** `lept2aum` (Dataset: `production`) — hr1 & hr2 @royalarabian.com invited as Viewer  
-**🔌 Supabase:** [View `enquiries` table](https://supabase.com/dashboard/project/gkgfiebmfrikumjyuhdm/editor) — hr1 & hr2 @royalarabian.com invited as Viewer  
+**🔌 Supabase:** [View `enquiries` table](https://supabase.com/dashboard/project/gkgfiebmfrikumjyuhdm/editor/17567?schema=public) — hr1 & hr2 @royalarabian.com invited as Viewer  
 
 
 ---
