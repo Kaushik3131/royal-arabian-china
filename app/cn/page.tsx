@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { CTABanner } from "@/components/destination/CTABanner";
 import { DestinationAbout } from "@/components/destination/DestinationAbout";
 import { GoodToKnow } from "@/components/destination/GoodToKnow";
 import { HeroBanner } from "@/components/destination/HeroBanner";
 import { HighlightsBar } from "@/components/destination/HighlightsBar";
+import { EnquiryForm } from "@/components/forms/EnquiryForm";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
+import { PackageGrid } from "@/components/packages/PackageGrid";
+import { Container } from "@/components/ui/Container";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { getClient } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { DESTINATION_BY_SLUG_QUERY } from "@/sanity/queries/destination";
@@ -85,7 +90,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function DestinationPage() {
-  const { destination } = await getPageData();
+  const { destination, featuredPackages } = await getPageData();
 
   // Return 404 page if destination document is not found in CMS
   if (!destination) {
@@ -126,27 +131,51 @@ export default async function DestinationPage() {
       <Breadcrumb items={[{ label: destination.name }]} />
 
       {/* Hero Banner Section */}
-      <HeroBanner
-        name={destination.name}
-        tagline={destination.tagline}
-        heroImage={destination.heroImage}
-        description={destination.description}
-      />
+      <ScrollReveal yOffset={20} duration={0.8}>
+        <HeroBanner
+          name={destination.name}
+          tagline={destination.tagline}
+          heroImage={destination.heroImage}
+          description={destination.description}
+        />
+      </ScrollReveal>
 
       {/* Highlights Bar Section */}
-      <HighlightsBar highlights={destination.highlights} />
+      <ScrollReveal delay={0.15}>
+        <HighlightsBar highlights={destination.highlights} />
+      </ScrollReveal>
 
       {/* About Section */}
-      <DestinationAbout
-        name={destination.name}
-        description={destination.description}
-      />
+      <ScrollReveal>
+        <DestinationAbout
+          name={destination.name}
+          description={destination.description}
+        />
+      </ScrollReveal>
 
-      {/* Package section placeholder - to be populated in Session 5 */}
-      {/* <div id="packages"> ... </div> */}
+      {/* Package Section */}
+      <ScrollReveal>
+        <PackageGrid packages={featuredPackages} />
+      </ScrollReveal>
+
+      {/* Enquiry Form Section */}
+      <section className="py-16 bg-gray-50 border-t border-b border-border">
+        <Container>
+          <ScrollReveal>
+            <EnquiryForm packages={featuredPackages.map((p) => p.name)} />
+          </ScrollReveal>
+        </Container>
+      </section>
+
+      {/* CTA Banner Section */}
+      <ScrollReveal>
+        <CTABanner />
+      </ScrollReveal>
 
       {/* Good to Know Section */}
-      <GoodToKnow items={destination.goodToKnow || []} />
+      <ScrollReveal>
+        <GoodToKnow items={destination.goodToKnow || []} />
+      </ScrollReveal>
     </div>
   );
 }

@@ -14,7 +14,14 @@ export const client = createClient({
  * In Draft Mode, returns a client with preview perspective and read token.
  */
 export async function getClient() {
-  const isDraftMode = (await draftMode()).isEnabled;
+  let isDraftMode = false;
+  try {
+    isDraftMode = (await draftMode()).isEnabled;
+  } catch (_err) {
+    // draftMode() throws when called outside request scope (e.g. during static generation)
+    isDraftMode = false;
+  }
+
   if (isDraftMode) {
     if (!readToken) {
       console.warn(
