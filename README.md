@@ -7,7 +7,7 @@ A high-performance, senior-architected travel destination portal built for Royal
 ## 🔗 Project Links & Credentials
 
 - **GitHub Repository**: [Kaushik3131/royal-arabian-china](https://github.com/Kaushik3131/royal-arabian-china)
-- **Deployment URL**: *Pending final deployment (Session 9)*
+- **Deployment URL**: [https://royal-arabian-china.vercel.app/cn](https://royal-arabian-china.vercel.app/cn)
 - **Sanity Project ID**: `lept2aum` (Dataset: `production`)
 - **Supabase URL**: `https://gkgfiebmfrikumjyuhdm.supabase.co`
 
