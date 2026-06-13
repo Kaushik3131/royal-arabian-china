@@ -32,7 +32,7 @@ export default function RootLayout({
         className={`${inter.variable} ${roboto.variable} font-body antialiased min-h-screen flex flex-col`}
       >
         <Header />
-        <main className="grow pt-20">{children}</main>
+        <main className="grow">{children}</main>
         <Footer />
       </body>
     </html>
