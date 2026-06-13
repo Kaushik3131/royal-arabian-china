@@ -2,16 +2,11 @@
 
 A CMS-driven travel destination page for Royal Arabian DMC, built as part of the Senior Full-Stack Developer Assessment.
 
-**Live:** [royal-arabian-china.vercel.app/cn](https://royal-arabian-china.vercel.app/cn) · **Repo:** [Kaushik3131/royal-arabian-china](https://github.com/Kaushik3131/royal-arabian-china)
-
-### Project Credentials
-
-| Service | Detail |
-|:---|:---|
-| Sanity Project ID | `lept2aum` (Dataset: `production`) |
-| Sanity Studio | [royal-arabian-china.vercel.app/studio](https://royal-arabian-china.vercel.app/studio) |
-| Supabase URL | `https://gkgfiebmfrikumjyuhdm.supabase.co` |
-| Supabase Table | `enquiries` (public insert via RLS policy) |
+**🌐 Live Site:** https://royal-arabian-china.vercel.app/cn
+**🎨 Sanity Studio:** https://royal-arabian-china.vercel.app/studio
+**📦 GitHub Repo:** https://github.com/Kaushik3131/royal-arabian-china
+**🗄️ Sanity Project ID:** `lept2aum` (Dataset: `production`)
+**🔌 Supabase URL:** https://gkgfiebmfrikumjyuhdm.supabase.co
 
 ---
 
